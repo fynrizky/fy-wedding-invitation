@@ -50,7 +50,7 @@ export default function RegularTemplate({ wedding }: Props) {
           Undangan sudah kadaluarsa
         </h1>
 
-        <button className="mt-4 px-4 py-2 bg-black text-white rounded">
+        <button className="mt-4 px-4 py-2 bg-mist-800 text-white rounded">
           Perpanjang Undangan
         </button>
       </div>
