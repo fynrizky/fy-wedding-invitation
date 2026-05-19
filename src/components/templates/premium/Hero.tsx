@@ -22,7 +22,7 @@ export default function Hero({ wedding }: Props) {
     height={300}
     className="
       absolute
-      -left-130
+      md:-left-130
       -bottom-40
       z-0
       w-40 md:w-500
@@ -60,7 +60,7 @@ export default function Hero({ wedding }: Props) {
       right-15
       -top-12
       z-0
-      w-16 md:w-120
+      w-110 md:w-120
       rotate-14
       pointer-events-none
     "
@@ -72,10 +72,10 @@ export default function Hero({ wedding }: Props) {
     height={120}
     className="
       absolute
-      right-180
+      left-25
       bottom-20
       z-0
-      w-16 md:w-110
+      w-100 md:w-110
       scale-x-[-1]
       -rotate-14
       pointer-events-none
