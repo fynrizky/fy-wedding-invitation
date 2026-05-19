@@ -23,11 +23,14 @@ export default function Hero({ wedding }: Props) {
     className="
        absolute
       -left-40
+      md:-left-100
       lg:-left-130
       -bottom-10
+      md:-bottom-25
       lg:-bottom-35
       z-0
       w-200
+      md:w-250
       lg:w-500
       opacity-70
       animate-[flowerFloat_8s_ease-in-out_infinite]
@@ -43,11 +46,15 @@ export default function Hero({ wedding }: Props) {
     className="
       absolute
       -right-40
+      md:-right-80
       lg:-right-130
       -top-5
+      md:-top-15
       lg:-top-30
       z-0
-      w-200 lg:w-500
+      w-200 
+      md:w-200
+      lg:w-500
       scale-x-[-1]
       opacity-70
       animate-[flowerFloat_10s_ease-in-out_infinite]
@@ -63,11 +70,15 @@ export default function Hero({ wedding }: Props) {
     className="
       absolute
       right-10
+      md:right-30
       lg:right-15
       top-0
+      md:-top-2
       lg:-top-10
       z-0
-      w-30 lg:w-120
+      w-30 
+      md:w-60
+      lg:w-120
       animate-[butterfly_6s_ease-in-out_infinite]
       rotate-14
       pointer-events-none
@@ -81,11 +92,15 @@ export default function Hero({ wedding }: Props) {
     className="
       absolute
       left-10
+      md:left-35
       lg:left-25
       top-80
+      md:top-80
       lg:top-55
       z-0
-      w-30 lg:w-110
+      w-30
+      md:w-60
+      lg:w-110
       scale-x-[-1]
       animate-[butterfly_8s_ease-in-out_infinite]
       -rotate-14
