@@ -21,14 +21,17 @@ export default function Hero({ wedding }: Props) {
     width={300}
     height={300}
     className="
-      absolute
-      md:-left-130
-      -bottom-40
+       absolute
+      -left-40
+      lg:-left-130
+      -bottom-10
+      lg:-bottom-35
       z-0
-      w-40 md:w-500
+      w-200
+      lg:w-500
       opacity-70
-      pointer-events-none
-    "
+      animate-[flowerFloat_8s_ease-in-out_infinite]
+      pointer-events-none"
   />
 
   {/* FLOWER RIGHT */}
@@ -39,14 +42,16 @@ export default function Hero({ wedding }: Props) {
     height={300}
     className="
       absolute
-      -right-130
-      -bottom-25
+      -right-40
+      lg:-right-130
+      -top-5
+      lg:-top-30
       z-0
-      w-40 md:w-500
+      w-200 lg:w-500
       scale-x-[-1]
       opacity-70
-      pointer-events-none
-    "
+      animate-[flowerFloat_10s_ease-in-out_infinite]
+      pointer-events-none"
   />
 
   {/* BUTTERFLY */}
@@ -57,10 +62,13 @@ export default function Hero({ wedding }: Props) {
     height={120}
     className="
       absolute
-      right-15
-      -top-12
+      right-10
+      lg:right-15
+      top-0
+      lg:-top-10
       z-0
-      w-110 md:w-120
+      w-30 lg:w-120
+      animate-[butterfly_6s_ease-in-out_infinite]
       rotate-14
       pointer-events-none
     "
@@ -72,11 +80,14 @@ export default function Hero({ wedding }: Props) {
     height={120}
     className="
       absolute
-      left-25
-      bottom-20
+      left-10
+      lg:left-25
+      top-80
+      lg:top-55
       z-0
-      w-100 md:w-110
+      w-30 lg:w-110
       scale-x-[-1]
+      animate-[butterfly_8s_ease-in-out_infinite]
       -rotate-14
       pointer-events-none
     "
