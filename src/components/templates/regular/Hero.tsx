@@ -21,14 +21,21 @@ export default function Hero({ wedding }: Props) {
     width={300}
     height={300}
     className="
-      absolute
-      md:-left-130
-      -bottom-40
+       absolute
+      -left-45
+      sm:-left-80
+      md:-left-100
+      lg:-left-130
+      -bottom-10
+      sm:-bottom-20
+      md:-bottom-25
+      lg:-bottom-35
       z-0
-      w-40 md:w-500
+      w-4xl
+      md:w-7xl
+      lg:w-7xl
       opacity-70
-      pointer-events-none
-    "
+      pointer-events-none"
   />
 
   {/* FLOWER RIGHT */}
@@ -39,14 +46,21 @@ export default function Hero({ wedding }: Props) {
     height={300}
     className="
       absolute
-      -right-130
-      -bottom-25
+      -right-45
+      sm:-right-80
+      md:-right-105
+      lg:-right-105
+      -top-5
+      sm:-top-15
+      md:-top-15
+      lg:-top-20
       z-0
-      w-40 md:w-500
-      scale-x-[-1]
+      w-4xl 
+      md:w-5xl
+      lg:w-5xl
       opacity-70
-      pointer-events-none
-    "
+      scale-x-[-1]
+      pointer-events-none"
   />
 
   {/* BUTTERFLY */}
@@ -57,10 +71,19 @@ export default function Hero({ wedding }: Props) {
     height={120}
     className="
       absolute
-      right-15
-      -top-12
+      right-10
+      sm:right-25
+      md:right-25
+      lg:right-25
+      top-0
+      sm:top-0
+      md:top-0
+      lg:-top-5
       z-0
-      w-110 md:w-120
+      w-30
+      sm:w-40 
+      md:w-50
+      lg:w-70
       rotate-14
       pointer-events-none
     "
@@ -72,10 +95,19 @@ export default function Hero({ wedding }: Props) {
     height={120}
     className="
       absolute
-      left-25
-      bottom-20
+      left-10
+      sm:left-20
+      md:left-30
+      lg:left-25
+      top-80
+      sm:top-80
+      md:top-80
+      lg:top-55
       z-0
-      w-100 md:w-110
+      w-30
+      sm:w-50
+      md:w-70
+      lg:w-110
       scale-x-[-1]
       -rotate-14
       pointer-events-none
@@ -136,6 +168,8 @@ export default function Hero({ wedding }: Props) {
       text-white
       px-8 py-3
       tracking-wide
+      border border-[#8b6b61] hover:bg-[#8b6b61]
+      rounded-lg
     "
   >
     RSVP HERE
