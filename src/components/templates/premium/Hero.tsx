@@ -50,15 +50,15 @@ export default function Hero({ wedding }: Props) {
       -right-45
       sm:-right-80
       md:-right-105
-      lg:-right-105
+      lg:-right-130
       -top-5
       sm:-top-15
       md:-top-15
       lg:-top-20
       z-0
-      w-4xl 
+      w-4xl
       md:w-5xl
-      lg:w-5xl
+      lg:w-7xl
       opacity-70
       scale-x-[-1]
       animate-[flowerFloat_10s_ease-in-out_infinite]
