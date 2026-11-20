@@ -1,10 +1,11 @@
 "use client";
 import Hero from "./Hero";
-// import Couple from "./Couple";
-// import Event from "./Event";
-// import Gallery from "./Gallery";
+import Couple from "@/components/sections/Couple";
+
+import Event from "@/components/sections/Event";
+import Gallery from "@/components/sections/Gallery";
 // import RSVP from "./RSVP";
-// import Countdown from "@/components/sections/Countdown";
+import Countdown from "@/components/sections/Countdown";
 // import MusicPlayer from "@/components/sections/MusicPlayer";
 import { normalizeWedding } from "@/app/helper/normalizeWedding";
 import OpeningScreen from "@/components/openingScreen";
@@ -77,13 +78,13 @@ export default function PremiumTemplate({ wedding }: Props) {
 
       <Hero wedding={liveWedding} />
 
-      {/* <Countdown date={wedding.eventDate} variant="premium" /> */}
+      <Countdown wedding={liveWedding} />
 
-      {/* <Couple wedding={wedding} /> */}
+      <Couple wedding={liveWedding} />
 
-      {/* <Event wedding={wedding} /> */}
+      <Event wedding={liveWedding} />
 
-      {/* <Gallery images={wedding.gallery} /> */}
+      <Gallery wedding={liveWedding} />
 
       {/* <RSVP wedding={wedding} /> */}
     </main>

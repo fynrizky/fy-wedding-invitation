@@ -25,15 +25,15 @@ export default function Hero({ wedding }: Props) {
       -left-45
       sm:-left-80
       md:-left-100
-      lg:-left-130
+      lg:-left-110
       -bottom-10
       sm:-bottom-20
       md:-bottom-25
-      lg:-bottom-35
+      lg:-bottom-25
       z-0
       w-4xl
-      md:w-7xl
-      lg:w-7xl
+      md:w-270
+      lg:w-270
       opacity-70
       animate-[flowerFloat_8s_ease-in-out_infinite]
       pointer-events-none"
@@ -49,16 +49,16 @@ export default function Hero({ wedding }: Props) {
       absolute
       -right-45
       sm:-right-80
-      md:-right-105
-      lg:-right-130
+      md:-right-100
+      lg:-right-105
       -top-5
       sm:-top-15
       md:-top-15
       lg:-top-20
       z-0
       w-4xl
-      md:w-5xl
-      lg:w-7xl
+      md:w-262.5
+      lg:w-262.5
       opacity-70
       scale-x-[-1]
       animate-[flowerFloat_10s_ease-in-out_infinite]

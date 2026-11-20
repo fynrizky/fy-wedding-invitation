@@ -19,7 +19,7 @@ export interface Wedding {
   createdAt: Date;
   expiredAt: Date;
   packageType: string;
-  // gallery: string[];
+  gallery: string[];
   // musicUrl: string;
   // theme: string;
   isPublished: boolean;

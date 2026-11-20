@@ -3,7 +3,7 @@ import Hero from "./Hero";
 // import Couple from "./Couple";
 // import Event from "./Event";
 // import Gallery from "./Gallery";
-// import Countdown from "@/components/sections/Countdown";
+import Countdown from "@/components/sections/Countdown";
 // import MusicPlayer from "@/components/sections/MusicPlayer";
 
 import { normalizeWedding } from "@/app/helper/normalizeWedding";
@@ -73,7 +73,7 @@ export default function RegularTemplate({ wedding }: Props) {
 
       <Hero wedding={liveWedding} />
 
-      {/* <Countdown date={wedding.eventDate} /> */}
+      <Countdown wedding={liveWedding} />
 
       {/* <Couple wedding={wedding} /> */}
 
