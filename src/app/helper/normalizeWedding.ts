@@ -5,6 +5,8 @@ export function normalizeWedding(data: any, id?: string) {
     ...data,
     slug: id ?? data.slug,
 
+    gallery: data.gallery ?? [],
+
     createdAt: convert(data.createdAt),
     expiredAt: convert(data.expiredAt),
 

@@ -17,12 +17,17 @@ type Props = {
 export default function Gallery({ wedding }: Props) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const images = wedding.gallery ?? [
-    "/assets/gallery/1.jpg",
-    "/assets/gallery/2.jpg",
-    "/assets/gallery/3.jpg",
-    "/assets/gallery/2.jpg",
-  ];
+  const dummyImages = [
+  "/assets/gallery/1.jpg",
+  "/assets/gallery/2.jpg",
+  "/assets/gallery/3.jpg",
+  "/assets/gallery/2.jpg",
+];
+
+const images =
+  wedding.gallery && wedding.gallery.length > 0
+    ? wedding.gallery
+    : dummyImages;
 
   // Disable body scroll ketika lightbox terbuka
   useEffect(() => {
