@@ -26,7 +26,7 @@ export async function getWeddingBySlug(slug: string): Promise<Wedding | null> {
       receptionDate: data.event?.receptionDate?.toDate?.() ?? null,
       receptionLocation: data.event?.receptionLocation,
     },
-
+    gallery: data.gallery ?? [],
     createdAt: data.createdAt.toDate(),
     expiredAt: data.expiredAt.toDate(),
 
