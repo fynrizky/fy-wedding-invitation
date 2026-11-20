@@ -165,74 +165,108 @@ const images =
           <div className="mx-auto my-8 h-px w-20 bg-[#8b6b61]/50" />
 
           {/* MASONRY-STYLE GALLERY */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {images.map((image, index) => (
-              <button
-                key={`${image}-${index}`}
-                type="button"
-                onClick={() => setSelectedImage(index)}
-                className="
-                  group
-                  relative
-                  aspect-[4/5]
-                  w-[calc(50%-0.5rem)]
-                  overflow-hidden
-                  rounded-2xl
-                  bg-[#e8ddd0]
-                  text-left
-                  md:w-[220px]
-                "
-              >
-                <Image
-                  src={image}
-                  alt={`Wedding memory ${index + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 220px"
-                  className="
-                    object-cover
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:scale-105
-                  "
-                />
+          <div
+            className="
+              grid
+              grid-cols-2
+              grid-flow-dense
+              auto-rows-[110px]
+              gap-3
+              md:grid-cols-12
+              md:auto-rows-[85px]
+              md:gap-5
+            "
+          >
+            {images.map((image, index) => {
+              const layouts = [
+                "col-span-2 row-span-3 md:col-span-6 md:row-span-4",
+                "col-span-1 row-span-2 md:col-span-3 md:row-span-2",
+                "col-span-1 row-span-2 md:col-span-3 md:row-span-2",
+                "col-span-2 row-span-2 md:col-span-6 md:row-span-3",
+                "col-span-1 row-span-2 md:col-span-3 md:row-span-2",
+                "col-span-1 row-span-2 md:col-span-3 md:row-span-2",
+              ];
 
-                <div
-                  className="
-                    absolute inset-0
-                    bg-black/0
-                    transition-colors
-                    duration-500
-                    group-hover:bg-black/20
-                  "
-                />
+              const layout = layouts[index % layouts.length];
 
-                <div
-                  className="
-                    absolute inset-0
-                    flex items-center justify-center
-                    opacity-0
-                    transition-opacity
+              return (
+                <button
+                  key={`${image}-${index}`}
+                  type="button"
+                  onClick={() => setSelectedImage(index)}
+                  className={`
+                    group
+                    relative
+                    ${layout}
+                    overflow-hidden
+                    rounded-xl
+                    border-[5px]
+                    border-white
+                    bg-[#e8ddd0]
+                    shadow-[0_8px_25px_rgba(91,36,20,0.10)]
+                    transition-all
                     duration-500
-                    group-hover:opacity-100
-                  "
+                    hover:-translate-y-1
+                    hover:shadow-[0_15px_35px_rgba(91,36,20,0.18)]
+                  `}
                 >
+                  <Image
+                    src={image}
+                    alt={`Wedding memory ${index + 1}`}
+                    fill
+                    sizes="
+                      (max-width: 768px) 50vw,
+                      (max-width: 1200px) 40vw,
+                      50vw
+                    "
+                    className="
+                      object-cover
+                      transition-transform
+                      duration-700
+                      ease-out
+                      group-hover:scale-105
+                    "
+                  />
+
+                  {/* HOVER OVERLAY */}
                   <div
                     className="
-                      flex h-12 w-12 items-center justify-center
-                      rounded-full
-                      border border-white/70
-                      bg-white/20
-                      text-white
-                      backdrop-blur-sm
+                      absolute inset-0
+                      bg-black/0
+                      transition-colors
+                      duration-500
+                      group-hover:bg-black/20
+                    "
+                  />
+
+                  {/* ZOOM ICON */}
+                  <div
+                    className="
+                      absolute inset-0
+                      flex items-center justify-center
+                      opacity-0
+                      transition-opacity
+                      duration-500
+                      group-hover:opacity-100
                     "
                   >
-                    <span className="text-lg">⌕</span>
+                    <div
+                      className="
+                        flex h-12 w-12 items-center justify-center
+                        rounded-full
+                        border border-white/70
+                        bg-white/20
+                        text-white
+                        backdrop-blur-sm
+                      "
+                    >
+                      <span className="text-xl">⌕</span>
+                    </div>
                   </div>
-                </div>
-              </button>
-            ))}
-          </div>
+                </button>
+              );
+            })}
+        </div>
 
           {/* FOOTER */}
           <p
